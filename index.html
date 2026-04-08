@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Digital Solutions | Torneos de Casino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .bg-main { background-color: #0b0f1a; }
+        .bg-card { background-color: #161c2d; }
+        .text-accent { color: #f59e0b; }
+        .bg-accent { background-color: #f59e0b; }
+        .gradient-border {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        /* Animación suave para el brillo del botón */
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        .btn-animate { animation: pulse-gold 2s infinite; }
+    </style>
+</head>
+<body class="bg-main text-white font-sans">
+
+    <nav class="p-4 border-b border-gray-800 flex justify-between items-center bg-card/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <div class="p-1.5 bg-accent rounded-lg">
+                <i class="fa-solid fa-clover text-black text-xl"></i>
+            </div>
+            <span class="font-black tracking-tighter text-lg uppercase">BG DIGITAL <span class="text-accent">SOLUTIONS</span></span>
+        </div>
+        <i class="fa-solid fa-bars text-xl text-gray-400"></i>
+    </nav>
+
+    <main class="max-w-md mx-auto p-4 space-y-6">
+        
+        <div class="bg-card rounded-[2.5rem] overflow-hidden border border-gray-800 shadow-2xl">
+            <div class="gradient-border p-8 text-center relative">
+                <span class="absolute top-4 left-6 bg-black/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Torneo Activo</span>
+                <h2 class="text-4xl font-black italic text-black mb-1">GATES OF OLYMPUS</h2>
+                <p class="text-black/70 font-bold text-sm uppercase tracking-widest italic">Multiplicador x5000</p>
+            </div>
+
+            <div class="grid grid-cols-2 bg-black/20 border-b border-gray-800">
+                <div class="p-4 text-center border-r border-gray-800">
+                    <p class="text-[10px] text-gray-500 font-bold uppercase">Premio Total</p>
+                    <p class="text-xl font-black text-accent">$10,000</p>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-[10px] text-gray-500 font-bold uppercase">Termina en</p>
+                    <p id="timer" class="text-xl font-mono font-black italic">00:00:00</p>
+                </div>
+            </div>
+
+            <div class="p-6">
+                <div class="relative rounded-2xl overflow-hidden aspect-video bg-gray-900 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center group cursor-pointer hover:border-accent transition-all">
+                    <i class="fa-solid fa-play-circle text-6xl text-accent/50 group-hover:text-accent transition-all mb-2"></i>
+                    <p class="text-xs font-bold text-gray-500">CARGANDO DEMO API...</p>
+                </div>
+
+                <button class="w-full bg-accent hover:bg-yellow-500 text-black font-black py-5 rounded-2xl mt-6 text-xl uppercase tracking-tighter btn-animate transition-transform active:scale-95">
+                    ¡Jugar Gratis Ahora!
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-card/50 rounded-3xl p-6 border border-gray-800">
+            <h3 class="text-xs font-black text-gray-500 uppercase tracking-[0.2em] mb-4 flex items-center">
+                <i class="fa-solid fa-trophy text-accent mr-2"></i> Tabla de Posiciones
+            </h3>
+            <div class="space-y-3">
+                <div class="flex justify-between items-center p-3 bg-gray-800/50 rounded-xl border-l-2 border-accent">
+                    <span class="text-sm font-bold"><span class="text-accent mr-2">1.</span> User_Vip7</span>
+                    <span class="font-mono text-sm">89,450 pts</span>
+                </div>
+                <div class="flex justify-between items-center p-3 bg-gray-800/20 rounded-xl">
+                    <span class="text-sm font-bold text-gray-400"><span class="mr-2">2.</span> Alex_Casino</span>
+                    <span class="font-mono text-sm text-gray-400">75,200 pts</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="p-10 text-center">
+        <p class="text-[9px] text-gray-600 font-bold uppercase tracking-widest">
+            BG Digital Solutions &copy; 2026<br>
+            Plataforma de Afiliación Autorizada
+        </p>
+    </footer>
+
+    <script>
+        // Lógica del contador regresivo
+        function updateTimer() {
+            const now = new Date();
+            const h = 23 - now.getHours();
+            const m = 59 - now.getMinutes();
+            const s = 59 - now.getSeconds();
+            document.getElementById('timer').innerText = 
+                `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
