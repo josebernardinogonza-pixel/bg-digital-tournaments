@@ -36,7 +36,7 @@
             <div id="user-info" class="hidden flex items-center gap-2 bg-gray-800/50 rounded-full pr-2 border border-gray-700">
                 <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full border-2 border-accent">
                 <span id="user-name" class="text-xs font-bold px-1 truncate max-w-[80px]"></span>
-                <button id="btn-logout" class="text-xs text-gray-400 hover:text-white p-1 ml-1">
+                <button id="btn-logout" class="text-xs text-gray-400 hover:text-white p-1 ml-1" title="Cerrar Sesión">
                     <i class="fa-solid fa-sign-out-alt"></i>
                 </button>
             </div>
@@ -57,27 +57,28 @@
 
             <div class="grid grid-cols-2 bg-black/20 border-b border-gray-800">
                 <div class="p-4 text-center border-r border-gray-800">
-                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Premio Total</p>
-                    <p class="text-2xl font-black text-accent">$10,000</p>
+                    <p class="text-[10px] text-gray-500 font-bold uppercase">Premio Total</p>
+                    <p class="text-xl font-black text-accent">$10,000</p>
                 </div>
                 <div class="p-4 text-center">
-                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Termina en</p>
-                    <p class="text-2xl font-mono font-black italic text-white uppercase tracking-tighter">4 DÍAS</p>
+                    <p class="text-[10px] text-gray-500 font-bold uppercase">Termina en</p>
+                    <p class="text-xl font-mono font-black italic text-white uppercase tracking-tighter">4 Días</p>
                 </div>
             </div>
 
             <div class="p-6">
-                <div id="game-container" class="relative rounded-2xl overflow-hidden aspect-video bg-gray-900 border-2 border-gray-700 group cursor-pointer hover:border-accent transition-all shadow-inner">
-                    <img src="https://www.pragmaticplay.com/wp-content/uploads/2021/02/Gates-of-Olympus-Ger-scaled.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 group-hover:bg-black/20 transition-all">
-                        <i class="fa-solid fa-play-circle text-7xl text-accent/80 group-hover:text-accent group-hover:scale-110 transition-all duration-300"></i>
-                        <p class="text-sm font-black text-white uppercase tracking-widest mt-3 bg-black/60 px-4 py-1 rounded-full border border-gray-700">Jugar Demo</p>
+                <div id="game-container" class="relative rounded-2xl overflow-hidden aspect-video bg-gray-900 border-2 border-gray-700 group cursor-pointer hover:border-accent transition-all">
+                    <img src="https://www.pragmaticplay.com/wp-content/uploads/2021/02/Gates-of-Olympus-Ger-scaled.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-transparent transition-colors">
+                        <i class="fa-solid fa-play-circle text-7xl text-accent/80 group-hover:text-accent group-hover:scale-110 transition-all"></i>
+                        <p class="text-xs font-bold text-white mt-3 bg-black/60 px-4 py-1 rounded-full border border-gray-700">CLICK PARA JUGAR DEMO</p>
                     </div>
                 </div>
 
                 <div id="playing-state" class="hidden relative rounded-2xl overflow-hidden aspect-video bg-gray-900 border-2 border-accent flex flex-col items-center justify-center">
                     <i class="fa-solid fa-spinner fa-spin text-4xl text-accent mb-3"></i>
-                    <p class="text-sm font-bold text-white uppercase tracking-wider">¡Generando puntuación!</p>
+                    <p class="text-sm font-bold text-white uppercase">¡Jugando Torneo!</p>
+                    <p class="text-xs text-gray-400 mt-1">Sincronizando puntuación...</p>
                 </div>
 
                 <button id="btn-play" class="w-full bg-accent hover:bg-yellow-500 text-black font-black py-5 rounded-2xl mt-6 text-xl uppercase tracking-tighter btn-animate transition-transform active:scale-95 shadow-lg">
@@ -91,27 +92,25 @@
                 <i class="fa-solid fa-gift text-accent mr-2"></i> Bonos Exclusivos México
             </h3>
             <div class="space-y-4">
-                
-                <div class="bg-gray-900 rounded-2xl p-4 border border-gray-700 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 bg-accent text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase z-10">Código: STYVIP</div>
-                    <a href="https://stake.com/?c=bgsolutions" target="_blank" rel="noopener noreferrer">
-                        <img src="https://i.postimg.cc/k4G6Vz1Z/1000100096.webp" alt="Bono Stake 1000 USD" class="w-full h-auto rounded-lg mb-4 hover:scale-[1.02] transition-transform">
-                        <div class="bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 font-bold py-3 rounded-xl text-center uppercase tracking-wider transition-colors">
-                            Reclamar Bono Stake <i class="fa-solid fa-arrow-right ml-1"></i>
-                        </div>
+                <div class="bg-gray-900 rounded-2xl p-5 border border-gray-700 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-accent text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Crypto Casino</div>
+                    <h4 class="text-xl font-black text-white mb-1">Stake</h4>
+                    <p class="text-accent font-bold text-sm mb-3">Bono 200% + Código Exclusivo</p>
+                    <a href="https://stake.com/?c=bgsolutions" target="_blank" rel="noopener noreferrer" class="block w-full bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 font-bold py-3 rounded-xl text-center uppercase tracking-wider transition-colors">
+                        Reclamar Stake <i class="fa-solid fa-arrow-right ml-1"></i>
                     </a>
                 </div>
-
-                <div class="bg-gray-900 rounded-2xl p-4 border border-red-900/50 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase z-10">Casino Local</div>
-                    <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions_Web&zone=58512208&lp=55402446" target="_blank" rel="noopener noreferrer">
-                        <img src="https://online.caliente.mx/loadDisplay?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions_Web&zone=58512208&lp=55402446" width="1200" height="627" class="w-full h-auto rounded-lg mb-4 shadow-lg hover:scale-[1.02] transition-transform">
+                <div class="bg-gray-900 rounded-2xl p-5 border border-red-900/50 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Casino Local</div>
+                    <h4 class="text-xl font-black text-white mb-1">Caliente.mx</h4>
+                    <p class="text-red-500 font-bold text-sm mb-3">Bono de $1,000 por registro</p>
+                    <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions&zone=57406027&lp=54722035" target="_blank" rel="noopener noreferrer" class="block w-full">
+                        <img src="https://online.caliente.mx/loadDisplay?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions&zone=57406027&lp=54722035" width="1200" height="627" border="0" class="w-full h-auto rounded-lg mb-3 shadow-lg" />
                         <div class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl text-center uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(220,38,38,0.3)]">
                             Reclamar Caliente <i class="fa-solid fa-arrow-right ml-1"></i>
                         </div>
                     </a>
                 </div>
-
             </div>
         </div>
 
@@ -124,14 +123,21 @@
 
     </main>
 
+    <div class="fixed bottom-0 left-0 right-0 p-3 bg-card/95 backdrop-blur border-t border-gray-800 z-40">
+        <div class="max-w-md mx-auto flex gap-2">
+            <a href="https://stake.com/?c=bgsolutions" target="_blank" class="flex-1 bg-gray-800 border border-gray-600 text-white font-black py-3 rounded-xl text-center uppercase text-sm"><span>Stake</span></a>
+            <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions&zone=57406027&lp=54722035" target="_blank" class="flex-[2] bg-red-600 text-white font-black py-3 rounded-xl text-center uppercase text-sm shadow-[0_0_15px_rgba(220,38,38,0.3)]"><span>Caliente.mx</span></a>
+        </div>
+    </div>
+
     <div id="conversion-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-        <div class="bg-card border border-accent rounded-3xl p-6 max-w-sm w-full text-center">
+        <div class="bg-card border border-accent rounded-3xl p-6 max-w-sm w-full text-center relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white w-8 h-8 rounded-full bg-gray-800">×</button>
             <h3 class="text-2xl font-black italic mb-1 uppercase text-white">¡Gran jugada!</h3>
             <p id="score-display" class="text-accent font-mono text-xl font-bold mb-6"></p>
             <div class="space-y-3">
-                <a href="https://stake.com/?c=bgsolutions" target="_blank" class="block w-full bg-gray-800 border border-accent text-white font-black py-4 rounded-xl uppercase">Registrar en Stake</a>
-                <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions_Web&zone=58512208&lp=55402446" target="_blank" class="block w-full bg-red-600 text-white font-black py-4 rounded-xl uppercase">Registrar en Caliente</a>
-                <button onclick="document.getElementById('conversion-modal').classList.add('hidden')" class="text-gray-500 text-xs font-bold mt-2 hover:text-white uppercase">Cerrar</button>
+                <a href="https://stake.com/?c=bgsolutions" target="_blank" class="block w-full bg-gray-800 border border-accent text-white font-black py-4 rounded-xl uppercase">Jugar en Stake</a>
+                <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions&zone=57406027&lp=54722035" target="_blank" class="block w-full bg-red-600 text-white font-black py-4 rounded-xl uppercase">Jugar en Caliente</a>
             </div>
         </div>
     </div>
@@ -139,20 +145,22 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
         import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-        import { getFirestore, collection, query, orderBy, limit, onSnapshot, doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+        import { getFirestore, collection, query, orderBy, limit, onSnapshot, doc, getDoc, setDoc, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
-        // NOTA: Recuerda rotar y restringir esta API KEY en la consola de Google Cloud
         const firebaseConfig = {
             projectId: "studio-4557111923-dfb4a",
             appId: "1:686598688067:web:1b3a709035c0335894f3f6",
             apiKey: "AIzaSyAfXH9-V4HF42UjHEb1wyt_Be1bekO5U5U",
             authDomain: "studio-4557111923-dfb4a.firebaseapp.com",
-            firestoreDatabaseId: "ai-studio-83214668-23c3-4a09-b776-b34dc47894ef"
+            firestoreDatabaseId: "ai-studio-83214668-23c3-4a09-b776-b34dc47894ef",
+            storageBucket: "studio-4557111923-dfb4a.firebasestorage.app",
+            messagingSenderId: "686598688067"
         };
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
+        setLogLevel('silent');
 
         const btnLogin = document.getElementById('btn-login');
         const btnLogout = document.getElementById('btn-logout');
@@ -164,9 +172,12 @@
         const playingState = document.getElementById('playing-state');
         const leaderboardContainer = document.getElementById('leaderboard-container');
         const conversionModal = document.getElementById('conversion-modal');
+        const closeModal = document.getElementById('close-modal');
         const scoreDisplay = document.getElementById('score-display');
 
         let currentUser = null;
+
+        closeModal.onclick = () => conversionModal.classList.add('hidden');
 
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -175,39 +186,47 @@
                 userInfo.classList.remove('hidden');
                 userName.textContent = user.displayName.split(' ')[0];
                 userAvatar.src = user.photoURL;
-                btnPlay.textContent = '¡Jugar Ahora!';
+                btnPlay.textContent = '¡Jugar Torneo!';
             } else {
                 currentUser = null;
                 btnLogin.classList.remove('hidden');
                 userInfo.classList.add('hidden');
-                btnPlay.textContent = 'Inicia Sesión para Jugar';
+                btnPlay.textContent = '¡Inicia Sesión para Jugar!';
             }
         });
 
-        btnLogin.onclick = () => signInWithPopup(auth, new GoogleAuthProvider());
-        btnLogout.onclick = () => signOut(auth);
+        btnLogin.onclick = async () => {
+            try { await signInWithPopup(auth, new GoogleAuthProvider()); } catch (e) { console.error(e); }
+        };
+
+        btnLogout.onclick = async () => { await signOut(auth); };
 
         btnPlay.onclick = async () => {
             if (!currentUser) { btnLogin.click(); return; }
+
             btnPlay.disabled = true;
+            btnPlay.classList.add('opacity-50');
             gameContainer.classList.add('hidden');
             playingState.classList.remove('hidden');
 
             setTimeout(async () => {
-                const newScore = Math.floor(Math.random() * 40000) + 10000;
-                const userRef = doc(db, 'leaderboard', currentUser.uid);
-                const snap = await getDoc(userRef);
-                const high = snap.exists() ? snap.data().score : 0;
-
-                if (newScore > high) {
-                    await setDoc(userRef, { uid: currentUser.uid, displayName: currentUser.displayName, score: newScore, updatedAt: serverTimestamp() });
+                const newScore = Math.floor(Math.random() * 50000) + 10000;
+                try {
+                    const userRef = doc(db, 'leaderboard', currentUser.uid);
+                    const snap = await getDoc(userRef);
+                    const high = snap.exists() ? snap.data().score : 0;
+                    if (newScore > high) {
+                        await setDoc(userRef, { uid: currentUser.uid, displayName: currentUser.displayName, score: newScore, updatedAt: serverTimestamp() });
+                    }
+                    scoreDisplay.innerText = newScore > high ? `¡NUEVO RÉCORD! ${newScore.toLocaleString()} pts` : `PUNTUACIÓN: ${newScore.toLocaleString()} pts`;
+                    conversionModal.classList.remove('hidden');
+                } catch (e) { console.error(e); }
+                finally {
+                    btnPlay.disabled = false;
+                    btnPlay.classList.remove('opacity-50');
+                    gameContainer.classList.remove('hidden');
+                    playingState.classList.add('hidden');
                 }
-
-                scoreDisplay.innerText = `${newScore.toLocaleString()} PTS`;
-                conversionModal.classList.remove('hidden');
-                btnPlay.disabled = false;
-                gameContainer.classList.remove('hidden');
-                playingState.classList.add('hidden');
             }, 3000);
         };
 
@@ -216,10 +235,11 @@
             let rank = 1;
             snap.forEach(doc => {
                 const data = doc.data();
+                const isMe = currentUser && currentUser.uid === data.uid;
                 leaderboardContainer.innerHTML += `
-                    <div class="flex justify-between items-center p-3 rounded-xl bg-gray-800/30 ${rank === 1 ? 'border border-accent/50' : ''}">
-                        <span class="text-sm font-bold"><span class="text-accent mr-2">${rank}.</span> ${data.displayName.split(' ')[0]}</span>
-                        <span class="font-mono text-sm">${data.score.toLocaleString()}</span>
+                    <div class="flex justify-between items-center p-3 rounded-xl ${rank === 1 ? 'bg-gray-800/50 border-l-2 border-accent' : 'bg-gray-800/20'} ${isMe ? 'border border-accent/50' : ''}">
+                        <span class="text-sm font-bold text-gray-400"><span class="text-accent mr-2">${rank}.</span> ${data.displayName.split(' ')[0]}</span>
+                        <span class="font-mono text-sm text-white">${data.score.toLocaleString()} pts</span>
                     </div>`;
                 rank++;
             });
