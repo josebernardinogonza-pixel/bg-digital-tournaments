@@ -14,21 +14,17 @@
         .gradient-border {
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
         }
-        /* Animación suave para el brillo del botón */
         @keyframes pulse-gold {
             0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
             70% { box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
             100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
         }
         .btn-animate { animation: pulse-gold 2s infinite; }
-        
-        /* Ocultar elementos por defecto */
         .hidden { display: none !important; }
     </style>
 </head>
-<body class="bg-main text-white font-sans pb-24"> <!-- pb-24 para dar espacio al sticky footer -->
+<body class="bg-main text-white font-sans pb-24">
 
-    <!-- Header / Navegación -->
     <nav class="p-4 border-b border-gray-800 flex justify-between items-center bg-card/80 backdrop-blur-sm sticky top-0 z-50">
         <div class="flex items-center gap-2">
             <div class="p-1.5 bg-accent rounded-lg">
@@ -37,7 +33,6 @@
             <span class="font-black tracking-tighter text-lg uppercase">BG DIGITAL <span class="text-accent">SOLUTIONS</span></span>
         </div>
         <div class="flex items-center gap-4">
-            <!-- Perfil de Usuario (Oculto por defecto) -->
             <div id="user-info" class="hidden flex items-center gap-2 bg-gray-800/50 rounded-full pr-2 border border-gray-700">
                 <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full border-2 border-accent">
                 <span id="user-name" class="text-xs font-bold px-1 truncate max-w-[80px]"></span>
@@ -45,7 +40,6 @@
                     <i class="fa-solid fa-sign-out-alt"></i>
                 </button>
             </div>
-            <!-- Botón Login -->
             <button id="btn-login" class="bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold py-2 px-4 rounded-lg transition-colors">
                 <i class="fa-brands fa-google mr-2"></i> Iniciar Sesión
             </button>
@@ -54,7 +48,6 @@
 
     <main class="max-w-md mx-auto p-4 space-y-6">
         
-        <!-- Tarjeta del Torneo -->
         <div class="bg-card rounded-[2.5rem] overflow-hidden border border-gray-800 shadow-2xl">
             <div class="gradient-border p-8 text-center relative">
                 <span class="absolute top-4 left-6 bg-black/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Torneo Activo</span>
@@ -74,13 +67,11 @@
             </div>
 
             <div class="p-6">
-                <!-- Contenedor del Juego -->
                 <div id="game-container" class="relative rounded-2xl overflow-hidden aspect-video bg-gray-900 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center group cursor-pointer hover:border-accent transition-all">
                     <i class="fa-solid fa-play-circle text-6xl text-accent/50 group-hover:text-accent transition-all mb-2"></i>
                     <p class="text-xs font-bold text-gray-500">CARGANDO DEMO API...</p>
                 </div>
 
-                <!-- Estado Jugando -->
                 <div id="playing-state" class="hidden relative rounded-2xl overflow-hidden aspect-video bg-gray-900 border-2 border-accent flex flex-col items-center justify-center">
                     <i class="fa-solid fa-spinner fa-spin text-4xl text-accent mb-3"></i>
                     <p class="text-sm font-bold text-white">¡Jugando Torneo!</p>
@@ -93,13 +84,11 @@
             </div>
         </div>
 
-        <!-- Bonos Exclusivos México -->
         <div class="bg-card/50 rounded-3xl p-6 border border-gray-800">
             <h3 class="text-xs font-black text-gray-500 uppercase tracking-[0.2em] mb-4 flex items-center">
                 <i class="fa-solid fa-gift text-accent mr-2"></i> Bonos Exclusivos México
             </h3>
             <div class="space-y-4">
-                <!-- Stake Card -->
                 <div class="bg-gray-900 rounded-2xl p-5 border border-gray-700 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 bg-accent text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Crypto Casino</div>
                     <h4 class="text-xl font-black text-white mb-1">Stake</h4>
@@ -108,19 +97,20 @@
                         Reclamar Stake <i class="fa-solid fa-arrow-right ml-1"></i>
                     </a>
                 </div>
-                <!-- Caliente Card -->
                 <div class="bg-gray-900 rounded-2xl p-5 border border-red-900/50 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Casino Local</div>
                     <h4 class="text-xl font-black text-white mb-1">Caliente.mx</h4>
                     <p class="text-red-500 font-bold text-sm mb-3">Bono de $1,000 por registro</p>
-                    <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions_Web&zone=58512208&lp=55402446" target="_blank" rel="noopener noreferrer" class="block w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl text-center uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(220,38,38,0.3)]">
-                        Reclamar Caliente <i class="fa-solid fa-arrow-right ml-1"></i>
+                    <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions&zone=57406027&lp=54722035" target="_blank" rel="noopener noreferrer" class="block w-full">
+                        <img src="https://online.caliente.mx/loadDisplay?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions&zone=57406027&lp=54722035" width="1200" height="627" border="0" class="w-full h-auto rounded-lg mb-3 shadow-lg" />
+                        <div class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl text-center uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(220,38,38,0.3)]">
+                            Reclamar Caliente <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </div>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Tabla de Posiciones -->
         <div class="bg-card/50 rounded-3xl p-6 border border-gray-800">
             <h3 class="text-xs font-black text-gray-500 uppercase tracking-[0.2em] mb-4 flex items-center">
                 <i class="fa-solid fa-trophy text-accent mr-2"></i> Tabla de Posiciones
@@ -134,7 +124,6 @@
 
     </main>
 
-    <!-- Footer Legal -->
     <footer class="p-10 text-center pb-28">
         <p class="text-[9px] text-gray-600 font-bold uppercase tracking-widest mb-2">
             BG Digital Solutions &copy; 2026<br>
@@ -149,19 +138,17 @@
         </div>
     </footer>
 
-    <!-- Sticky Footer (Afiliado) -->
     <div class="fixed bottom-0 left-0 right-0 p-3 bg-card/95 backdrop-blur border-t border-gray-800 z-40">
         <div class="max-w-md mx-auto flex gap-2">
             <a href="https://stake.com/?c=bgsolutions" target="_blank" rel="noopener noreferrer" class="flex-1 bg-gray-800 border border-gray-600 hover:bg-gray-700 text-white font-black py-3 rounded-xl text-center uppercase tracking-tighter transition-all active:scale-95 text-sm flex flex-col items-center justify-center">
                 <span>Stake</span>
             </a>
-            <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions_Web&zone=58512208&lp=55402446" target="_blank" rel="noopener noreferrer" class="flex-[2] bg-red-600 hover:bg-red-500 text-white font-black py-3 rounded-xl text-center uppercase tracking-tighter shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all active:scale-95 text-sm flex flex-col items-center justify-center">
+            <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions&zone=57406027&lp=54722035" target="_blank" rel="noopener noreferrer" class="flex-[2] bg-red-600 hover:bg-red-500 text-white font-black py-3 rounded-xl text-center uppercase tracking-tighter shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all active:scale-95 text-sm flex flex-col items-center justify-center">
                 <span>Caliente.mx</span>
             </a>
         </div>
     </div>
 
-    <!-- Modal de Conversión (Afiliado) -->
     <div id="conversion-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
         <div class="bg-card border border-accent rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl relative transform transition-all scale-100">
             <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 transition-colors">
@@ -179,7 +166,7 @@
                     Jugar en Stake <span class="text-accent text-xs block font-normal">Bono 200%</span>
                 </a>
                 
-                <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions_Web&zone=58512208&lp=55402446" target="_blank" rel="noopener noreferrer" class="block w-full bg-red-600 hover:bg-red-500 text-white font-black py-4 rounded-xl text-lg uppercase tracking-tighter transition-transform active:scale-95 shadow-[0_0_15px_rgba(220,38,38,0.4)]">
+                <a href="https://online.caliente.mx/page?member=JOSEBERNARDINO&campaign=DEFAULT&channel=BG_Digital_Solutions&zone=57406027&lp=54722035" target="_blank" rel="noopener noreferrer" class="block w-full bg-red-600 hover:bg-red-500 text-white font-black py-4 rounded-xl text-lg uppercase tracking-tighter transition-transform active:scale-95 shadow-[0_0_15px_rgba(220,38,38,0.4)]">
                     Jugar en Caliente <span class="text-white/80 text-xs block font-normal">Bono $1,000 MXN</span>
                 </a>
             </div>
@@ -191,7 +178,6 @@
         </div>
     </div>
 
-    <!-- Firebase SDKs (Modular) -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
         import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
@@ -208,48 +194,18 @@
             measurementId: ""
         };
 
-        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
-        
-        // Disable Firestore internal logging to prevent circular JSON errors in the preview environment
         setLogLevel('silent');
 
-        // Error Handling Spec for Firestore Operations
-        const OperationType = {
-            CREATE: 'create',
-            UPDATE: 'update',
-            DELETE: 'delete',
-            LIST: 'list',
-            GET: 'get',
-            WRITE: 'write',
-        };
+        const OperationType = { CREATE: 'create', UPDATE: 'update', DELETE: 'delete', LIST: 'list', GET: 'get', WRITE: 'write' };
 
         function handleFirestoreError(error, operationType, path) {
-            const errInfo = {
-                error: error instanceof Error ? error.message : String(error),
-                authInfo: {
-                    userId: auth.currentUser?.uid || null,
-                    email: auth.currentUser?.email || null,
-                    emailVerified: auth.currentUser?.emailVerified || false,
-                    isAnonymous: auth.currentUser?.isAnonymous || false,
-                    tenantId: auth.currentUser?.tenantId || null,
-                    providerInfo: (auth.currentUser?.providerData || []).map(provider => ({
-                        providerId: provider.providerId,
-                        displayName: provider.displayName,
-                        email: provider.email,
-                        photoUrl: provider.photoURL
-                    }))
-                },
-                operationType,
-                path
-            };
+            const errInfo = { error: error instanceof Error ? error.message : String(error), operationType, path };
             console.error('Firestore Error: ', JSON.stringify(errInfo));
-            throw new Error(JSON.stringify(errInfo));
         }
 
-        // DOM Elements
         const btnLogin = document.getElementById('btn-login');
         const btnLogout = document.getElementById('btn-logout');
         const userInfo = document.getElementById('user-info');
@@ -259,20 +215,14 @@
         const gameContainer = document.getElementById('game-container');
         const playingState = document.getElementById('playing-state');
         const leaderboardContainer = document.getElementById('leaderboard-container');
-        
-        // Modal Elements
         const conversionModal = document.getElementById('conversion-modal');
         const closeModal = document.getElementById('close-modal');
         const scoreDisplay = document.getElementById('score-display');
 
         let currentUser = null;
 
-        // Cerrar Modal
-        closeModal.addEventListener('click', () => {
-            conversionModal.classList.add('hidden');
-        });
+        closeModal.addEventListener('click', () => conversionModal.classList.add('hidden'));
 
-        // Auth State Listener
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 currentUser = user;
@@ -289,99 +239,49 @@
             }
         });
 
-        // Login
         btnLogin.addEventListener('click', async () => {
             const provider = new GoogleAuthProvider();
-            try {
-                await signInWithPopup(auth, provider);
-            } catch (error) {
-                if (error.code === 'auth/popup-closed-by-user') {
-                    console.log("El usuario cerró el popup de inicio de sesión.");
-                    return;
-                }
-                console.error("Error al iniciar sesión:", error instanceof Error ? error.message : String(error));
-                alert("Hubo un error al iniciar sesión. Por favor, intenta de nuevo.");
-            }
+            try { await signInWithPopup(auth, provider); } catch (error) { console.error("Error al iniciar sesión:", error); }
         });
 
-        // Logout
         btnLogout.addEventListener('click', async () => {
-            try {
-                await signOut(auth);
-            } catch (error) {
-                console.error("Error al cerrar sesión:", error instanceof Error ? error.message : String(error));
-            }
+            try { await signOut(auth); } catch (error) { console.error("Error al cerrar sesión:", error); }
         });
 
-        // Play Logic (Simulated)
         btnPlay.addEventListener('click', async () => {
             if (!currentUser) {
                 const provider = new GoogleAuthProvider();
-                try {
-                    await signInWithPopup(auth, provider);
-                } catch (error) {
-                    if (error.code === 'auth/popup-closed-by-user') {
-                        console.log("El usuario cerró el popup de inicio de sesión.");
-                        return;
-                    }
-                    console.error("Error al iniciar sesión:", error instanceof Error ? error.message : String(error));
-                }
+                try { await signInWithPopup(auth, provider); } catch (error) { console.error("Error login:", error); }
                 return;
             }
 
-            // Simulate playing
             btnPlay.disabled = true;
             btnPlay.classList.remove('btn-animate');
             btnPlay.classList.add('opacity-50');
             gameContainer.classList.add('hidden');
             playingState.classList.remove('hidden');
 
-            // Simulate a 3-second game session
             setTimeout(async () => {
-                const newScore = Math.floor(Math.random() * 50000) + 10000; // Random score between 10k and 60k
-                
+                const newScore = Math.floor(Math.random() * 50000) + 10000;
                 try {
                     const userDocRef = doc(db, 'leaderboard', currentUser.uid);
-                    let docSnap;
-                    try {
-                        docSnap = await getDoc(userDocRef);
-                    } catch (err) {
-                        handleFirestoreError(err, OperationType.GET, `leaderboard/${currentUser.uid}`);
-                    }
-                    
-                    let currentHighScore = 0;
-                    if (docSnap && docSnap.exists()) {
-                        currentHighScore = docSnap.data().score || 0;
-                    }
+                    let docSnap = await getDoc(userDocRef);
+                    let currentHighScore = (docSnap.exists()) ? docSnap.data().score : 0;
 
-                    let isNewRecord = false;
                     if (newScore > currentHighScore) {
-                        isNewRecord = true;
-                        try {
-                            await setDoc(userDocRef, {
-                                uid: currentUser.uid,
-                                displayName: currentUser.displayName,
-                                score: newScore,
-                                updatedAt: serverTimestamp()
-                            });
-                        } catch (err) {
-                            handleFirestoreError(err, OperationType.WRITE, `leaderboard/${currentUser.uid}`);
-                        }
+                        await setDoc(userDocRef, {
+                            uid: currentUser.uid,
+                            displayName: currentUser.displayName,
+                            score: newScore,
+                            updatedAt: serverTimestamp()
+                        });
                     }
 
-                    // Mostrar Modal de Conversión en lugar del alert nativo
-                    const scoreText = isNewRecord 
-                        ? `¡NUEVO RÉCORD! ${newScore.toLocaleString()} pts` 
-                        : `Puntuación: ${newScore.toLocaleString()} pts`;
-                    
-                    scoreDisplay.innerText = scoreText;
+                    scoreDisplay.innerText = (newScore > currentHighScore) ? `¡NUEVO RÉCORD! ${newScore.toLocaleString()} pts` : `Puntuación: ${newScore.toLocaleString()} pts`;
                     conversionModal.classList.remove('hidden');
-
                 } catch (error) {
-                    console.error("Error al guardar la puntuación:", error instanceof Error ? error.message : String(error));
-                    alert("Hubo un error al guardar tu puntuación.");
+                    handleFirestoreError(error, OperationType.WRITE, `leaderboard/${currentUser.uid}`);
                 } finally {
-                    // Reset UI
                     btnPlay.disabled = false;
                     btnPlay.classList.add('btn-animate');
                     btnPlay.classList.remove('opacity-50');
@@ -391,53 +291,36 @@
             }, 3000);
         });
 
-        // Leaderboard Listener
         const q = query(collection(db, 'leaderboard'), orderBy('score', 'desc'), limit(10));
         onSnapshot(q, (snapshot) => {
             leaderboardContainer.innerHTML = '';
-            
             if (snapshot.empty) {
-                leaderboardContainer.innerHTML = `
-                    <div class="text-center py-4 text-gray-500 text-sm">
-                        Aún no hay puntuaciones. ¡Sé el primero en jugar!
-                    </div>
-                `;
+                leaderboardContainer.innerHTML = `<div class="text-center py-4 text-gray-500 text-sm">Aún no hay puntuaciones.</div>`;
                 return;
             }
-
             let rank = 1;
             snapshot.forEach((doc) => {
                 const data = doc.data();
                 const isTop1 = rank === 1;
                 const isCurrentUser = currentUser && currentUser.uid === data.uid;
-                
-                const rankHtml = `
-                    <div class="flex justify-between items-center p-3 rounded-xl transition-colors ${isTop1 ? 'bg-gray-800/50 border-l-2 border-accent' : 'bg-gray-800/20'} ${isCurrentUser ? 'border border-accent/50' : ''}">
-                        <span class="text-sm font-bold ${isTop1 ? 'text-white' : 'text-gray-400'}">
-                            <span class="${isTop1 ? 'text-accent' : ''} mr-2">${rank}.</span> 
-                            ${data.displayName.split(' ')[0]} ${isCurrentUser ? '(Tú)' : ''}
-                        </span>
+                leaderboardContainer.innerHTML += `
+                    <div class="flex justify-between items-center p-3 rounded-xl ${isTop1 ? 'bg-gray-800/50 border-l-2 border-accent' : 'bg-gray-800/20'} ${isCurrentUser ? 'border border-accent/50' : ''}">
+                        <span class="text-sm font-bold ${isTop1 ? 'text-white' : 'text-gray-400'}"><span class="${isTop1 ? 'text-accent' : ''} mr-2">${rank}.</span> ${data.displayName.split(' ')[0]}</span>
                         <span class="font-mono text-sm ${isTop1 ? 'text-white' : 'text-gray-400'}">${data.score.toLocaleString()} pts</span>
-                    </div>
-                `;
-                leaderboardContainer.innerHTML += rankHtml;
+                    </div>`;
                 rank++;
             });
-        }, (error) => {
-            handleFirestoreError(error, OperationType.LIST, 'leaderboard');
         });
 
-        // Lógica del contador regresivo
         function updateTimer() {
             const now = new Date();
             const h = 23 - now.getHours();
             const m = 59 - now.getMinutes();
             const s = 59 - now.getSeconds();
-            document.getElementById('timer').innerText = 
-                `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            document.getElementById('timer').innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
         }
         setInterval(updateTimer, 1000);
         updateTimer();
     </script>
 </body>
-                        </html>
+</html>
